@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-UID2IMAPluginDevelopmentApp/Pods-UID2IMAPluginDevelopmentApp-frameworks.sh
+${BUILT_PRODUCTS_DIR}/UID2-IMA-Plugin/UID2_IMA_Plugin.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework/GoogleInteractiveMediaAds

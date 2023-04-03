@@ -1,0 +1,27 @@
+{
+  "name": "UID2-IMA-Plugin",
+  "version": "0.1.0",
+  "summary": "Secure Signals Adapter for integrating with UID2 SDK",
+  "description": "Secure Signals Adapter for integrating with UID2 SDK",
+  "homepage": "https://github.com/IABTechLab/uid2docs",
+  "license": {
+    "type": "Apache License, Version 2.0",
+    "url": "https://github.com/IABTechLab/uid2-ios-plugin-google-ima/blob/main/LICENSE.md"
+  },
+  "authors": {
+    "Brad Leege": "brad.leege@thetradedesk.com"
+  },
+  "source": {
+    "git": "https://github.com/IABTechLab/uid2-ios-plugin-google-ima",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "Sources/UID2IMAPlugin/**/*",
+  "dependencies": {
+    "GoogleAds-IMA-iOS-SDK": [
+      "~> 3.18.4"
+    ]
+  }
+}

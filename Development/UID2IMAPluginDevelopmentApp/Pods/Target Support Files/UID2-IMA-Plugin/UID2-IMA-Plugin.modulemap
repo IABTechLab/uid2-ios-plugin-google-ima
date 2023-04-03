@@ -1,0 +1,6 @@
+framework module UID2_IMA_Plugin {
+  umbrella header "UID2-IMA-Plugin-umbrella.h"
+
+  export *
+  module * { export * }
+}

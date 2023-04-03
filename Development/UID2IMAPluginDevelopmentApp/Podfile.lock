@@ -1,0 +1,23 @@
+PODS:
+  - GoogleAds-IMA-iOS-SDK (3.18.4)
+  - UID2-IMA-Plugin (0.1.0):
+    - GoogleAds-IMA-iOS-SDK (~> 3.18.4)
+
+DEPENDENCIES:
+  - UID2-IMA-Plugin (from `../..`)
+
+SPEC REPOS:
+  trunk:
+    - GoogleAds-IMA-iOS-SDK
+
+EXTERNAL SOURCES:
+  UID2-IMA-Plugin:
+    :path: "../.."
+
+SPEC CHECKSUMS:
+  GoogleAds-IMA-iOS-SDK: b01284e3bf3d64ba948de6692ffda531452c3713
+  UID2-IMA-Plugin: 5cbbe56837635ddcb642378fef30443f92412419
+
+PODFILE CHECKSUM: 6fddae7a1defedaa87b71c7da081d6aaa2ce9a47
+
+COCOAPODS: 1.12.0

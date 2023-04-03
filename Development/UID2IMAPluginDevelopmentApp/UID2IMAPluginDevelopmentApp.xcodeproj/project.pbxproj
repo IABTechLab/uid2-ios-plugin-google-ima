@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F41156C9DCAF10D35D82087 /* Pods_UID2IMAPluginDevelopmentApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A799905F009511F488A8A3D /* Pods_UID2IMAPluginDevelopmentApp.framework */; };
 		E26BB1B529DB4DD300DCD844 /* UID2IMAPluginDevelopmentAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BB1B429DB4DD300DCD844 /* UID2IMAPluginDevelopmentAppApp.swift */; };
 		E26BB1B729DB4DD300DCD844 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BB1B629DB4DD300DCD844 /* ContentView.swift */; };
 		E26BB1B929DB4DD400DCD844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26BB1B829DB4DD400DCD844 /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A799905F009511F488A8A3D /* Pods_UID2IMAPluginDevelopmentApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UID2IMAPluginDevelopmentApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C4483917404E494D7623213 /* Pods-UID2IMAPluginDevelopmentApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UID2IMAPluginDevelopmentApp.release.xcconfig"; path = "Target Support Files/Pods-UID2IMAPluginDevelopmentApp/Pods-UID2IMAPluginDevelopmentApp.release.xcconfig"; sourceTree = "<group>"; };
+		796758E1C6A31673515AD88F /* Pods-UID2IMAPluginDevelopmentApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UID2IMAPluginDevelopmentApp.debug.xcconfig"; path = "Target Support Files/Pods-UID2IMAPluginDevelopmentApp/Pods-UID2IMAPluginDevelopmentApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E26BB1B129DB4DD300DCD844 /* UID2IMAPluginDevelopmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UID2IMAPluginDevelopmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26BB1B429DB4DD300DCD844 /* UID2IMAPluginDevelopmentAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UID2IMAPluginDevelopmentAppApp.swift; sourceTree = "<group>"; };
 		E26BB1B629DB4DD300DCD844 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +30,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F41156C9DCAF10D35D82087 /* Pods_UID2IMAPluginDevelopmentApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7326167873A24EA3116E3E98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				796758E1C6A31673515AD88F /* Pods-UID2IMAPluginDevelopmentApp.debug.xcconfig */,
+				3C4483917404E494D7623213 /* Pods-UID2IMAPluginDevelopmentApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E26BB1A829DB4DD300DCD844 = {
 			isa = PBXGroup;
 			children = (
 				E26BB1B329DB4DD300DCD844 /* UID2IMAPluginDevelopmentApp */,
 				E26BB1B229DB4DD300DCD844 /* Products */,
+				7326167873A24EA3116E3E98 /* Pods */,
+				EE36ED403661084C5A092D8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EE36ED403661084C5A092D8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A799905F009511F488A8A3D /* Pods_UID2IMAPluginDevelopmentApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E26BB1BF29DB4DD400DCD844 /* Build configuration list for PBXNativeTarget "UID2IMAPluginDevelopmentApp" */;
 			buildPhases = (
+				E3605F5C4B6096D7DC63D6BE /* [CP] Check Pods Manifest.lock */,
 				E26BB1AD29DB4DD300DCD844 /* Sources */,
 				E26BB1AE29DB4DD300DCD844 /* Frameworks */,
 				E26BB1AF29DB4DD300DCD844 /* Resources */,
+				78AE0613681993590161B834 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		78AE0613681993590161B834 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UID2IMAPluginDevelopmentApp/Pods-UID2IMAPluginDevelopmentApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UID2IMAPluginDevelopmentApp/Pods-UID2IMAPluginDevelopmentApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UID2IMAPluginDevelopmentApp/Pods-UID2IMAPluginDevelopmentApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3605F5C4B6096D7DC63D6BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UID2IMAPluginDevelopmentApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E26BB1AD29DB4DD300DCD844 /* Sources */ = {
@@ -261,6 +330,7 @@
 		};
 		E26BB1C029DB4DD400DCD844 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 796758E1C6A31673515AD88F /* Pods-UID2IMAPluginDevelopmentApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +360,7 @@
 		};
 		E26BB1C129DB4DD400DCD844 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4483917404E494D7623213 /* Pods-UID2IMAPluginDevelopmentApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
