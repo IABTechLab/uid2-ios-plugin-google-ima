@@ -14,6 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E247957229E5DEAF0064D899 /* uid2-ios-plugin-google-ima */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "uid2-ios-plugin-google-ima"; path = ../..; sourceTree = "<group>"; };
 		E252E54F29E5DCC40048B695 /* UID2GoogleIMADevelopmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UID2GoogleIMADevelopmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E252E55229E5DCC40048B695 /* UID2GoogleIMADevelopmentAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UID2GoogleIMADevelopmentAppApp.swift; sourceTree = "<group>"; };
 		E252E55429E5DCC40048B695 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,9 +33,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E247957129E5DEAF0064D899 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				E247957229E5DEAF0064D899 /* uid2-ios-plugin-google-ima */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		E252E54629E5DCC40048B695 = {
 			isa = PBXGroup;
 			children = (
+				E247957129E5DEAF0064D899 /* Packages */,
 				E252E55129E5DCC40048B695 /* UID2GoogleIMADevelopmentApp */,
 				E252E55029E5DCC40048B695 /* Products */,
 			);
