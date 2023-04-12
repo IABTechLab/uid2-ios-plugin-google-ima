@@ -20,7 +20,7 @@ jobs:
         run: swiftlint lint --config .swiftlint.yml --reporter github-actions-logging
 
       - name: Build
-        run: xcodebuild -scheme UID2GMAPlugin -sdk iphonesimulator16.2 -destination "OS=16.2,name=iPhone 14"
+        run: xcodebuild -scheme UID2IMAPlugin -sdk iphonesimulator16.2 -destination "OS=16.2,name=iPhone 14"
 
       - name: Run unit tests
-        run: xcodebuild test -scheme UID2GMAPluginTests -sdk iphonesimulator16.2 -destination "OS=16.2,name=iPhone 14"
+        run: xcodebuild test -scheme UID2IMAPluginTests -sdk iphonesimulator16.2 -destination "OS=16.2,name=iPhone 14"
