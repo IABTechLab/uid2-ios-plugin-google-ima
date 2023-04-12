@@ -9,7 +9,7 @@
 import XCTest
 import GoogleInteractiveMediaAds
 import UID2
-@testable import UID2GooglePlugin
+import UID2IMAPlugin
 
 final class UID2IMASecureSignalsAdapterTests: XCTestCase {
 
@@ -98,7 +98,7 @@ final class UID2IMASecureSignalsAdapterTests: XCTestCase {
                     return
                 }
                 
-                XCTAssertEqual(UID2GoogleAdapterErrors.advertisingTokenNotFoundForGMA, error)
+                XCTAssertEqual(UID2GoogleAdapterErrors.advertisingTokenNotFoundForIMA, error)
             
                 continuation.resume(returning: "Successful Test")
                 

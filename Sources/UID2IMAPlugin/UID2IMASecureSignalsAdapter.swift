@@ -10,9 +10,9 @@ import UID2
 import GoogleInteractiveMediaAds
 
 @available(iOS 13.0, *)
-class UID2IMASecureSignalsAdapter: NSObject {
+public class UID2IMASecureSignalsAdapter: NSObject {
     
-    required override init() { }
+    required public override init() { }
     
 }
 

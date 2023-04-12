@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "uid2-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/IABTechLab/uid2-ios-sdk.git",
+      "state" : {
+        "revision" : "9706cbc8959593a81e5aea82926bc41ac9bbb9d3",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

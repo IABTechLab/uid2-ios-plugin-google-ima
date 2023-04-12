@@ -21,8 +21,12 @@ let package = Package(
         .target(
             name: "UID2IMAPlugin",
             dependencies: [
-                .product(name: "UID2", package: "uid2-ios-sdk")
+                .product(name: "UID2", package: "uid2-ios-sdk"),
+                "GoogleInteractiveMediaAds"
             ]),
+        .binaryTarget(name: "GoogleInteractiveMediaAds",
+                      url: "https://imasdk.googleapis.com/native/downloads/ima-ios-v3.18.5.zip",
+                      checksum: "f8473b337f4a24d0cf92e3e25227a9d33de139597b18332c368629ed30871422"),
         .testTarget(
             name: "UID2IMAPluginTests",
             dependencies: ["UID2IMAPlugin"],
