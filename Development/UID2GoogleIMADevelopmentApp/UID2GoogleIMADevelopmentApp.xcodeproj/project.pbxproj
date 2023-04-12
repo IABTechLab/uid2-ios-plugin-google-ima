@@ -12,6 +12,7 @@
 		E24EEB6F29E7170B00837636 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24EEB6E29E7170B00837636 /* ViewController.swift */; };
 		E24EEB7429E7170C00837636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24EEB7329E7170C00837636 /* Assets.xcassets */; };
 		E24EEB7729E7170C00837636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24EEB7529E7170C00837636 /* LaunchScreen.storyboard */; };
+		E261BEA529E71E1600BCCF1B /* UID2IMAPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = E261BEA429E71E1600BCCF1B /* UID2IMAPlugin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E261BEA529E71E1600BCCF1B /* UID2IMAPlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +44,7 @@
 				E24EEB7E29E7174800837636 /* Packages */,
 				E24EEB6929E7170B00837636 /* UID2GoogleIMADevelopmentApp */,
 				E24EEB6829E7170B00837636 /* Products */,
+				E261BEA329E71E1600BCCF1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +77,13 @@
 			name = Packages;
 			sourceTree = "<group>";
 		};
+		E261BEA329E71E1600BCCF1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,6 +100,9 @@
 			dependencies = (
 			);
 			name = UID2GoogleIMADevelopmentApp;
+			packageProductDependencies = (
+				E261BEA429E71E1600BCCF1B /* UID2IMAPlugin */,
+			);
 			productName = UID2GoogleIMADevelopmentApp;
 			productReference = E24EEB6729E7170B00837636 /* UID2GoogleIMADevelopmentApp.app */;
 			productType = "com.apple.product-type.application";
@@ -362,6 +375,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E261BEA429E71E1600BCCF1B /* UID2IMAPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UID2IMAPlugin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E24EEB5F29E7170B00837636 /* Project object */;
 }
