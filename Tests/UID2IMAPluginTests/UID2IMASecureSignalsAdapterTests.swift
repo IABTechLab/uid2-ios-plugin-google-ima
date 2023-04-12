@@ -5,7 +5,6 @@
 //  Created by Brad Leege on 3/20/23.
 //
 
-#if canImport(GoogleInteractiveMediaAds)
 import XCTest
 import GoogleInteractiveMediaAds
 import UID2
@@ -121,4 +120,3 @@ final class UID2IMASecureSignalsAdapterTests: XCTestCase {
     }
 
 }
-#endif
