@@ -14,6 +14,10 @@
 		E261BEA529E71E1600BCCF1B /* UID2IMAPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = E261BEA429E71E1600BCCF1B /* UID2IMAPlugin */; };
 		E261BEA829E736AA00BCCF1B /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E261BEA629E736AA00BCCF1B /* iPad.storyboard */; };
 		E261BEA929E736AA00BCCF1B /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E261BEA729E736AA00BCCF1B /* iPhone.storyboard */; };
+		E261BEAC29E73D3500BCCF1B /* AppDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E261BEAB29E73D3500BCCF1B /* AppDataLoader.swift */; };
+		E261BEAF29E73DBA00BCCF1B /* Date+AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E261BEAE29E73DBA00BCCF1B /* Date+AppExtensions.swift */; };
+		E261BEB129E73E2400BCCF1B /* String+AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E261BEB029E73E2400BCCF1B /* String+AppExtensions.swift */; };
+		E261BEB329E73E6800BCCF1B /* uid2identity.json in Resources */ = {isa = PBXBuildFile; fileRef = E261BEB229E73E6800BCCF1B /* uid2identity.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		E24EEB7F29E7174800837636 /* uid2-ios-plugin-google-ima */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "uid2-ios-plugin-google-ima"; path = ../..; sourceTree = "<group>"; };
 		E261BEA629E736AA00BCCF1B /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		E261BEA729E736AA00BCCF1B /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		E261BEAB29E73D3500BCCF1B /* AppDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataLoader.swift; sourceTree = "<group>"; };
+		E261BEAE29E73DBA00BCCF1B /* Date+AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+AppExtensions.swift"; sourceTree = "<group>"; };
+		E261BEB029E73E2400BCCF1B /* String+AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AppExtensions.swift"; sourceTree = "<group>"; };
+		E261BEB229E73E6800BCCF1B /* uid2identity.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = uid2identity.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 		E24EEB6929E7170B00837636 /* UID2GoogleIMADevelopmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				E261BEAD29E73D9A00BCCF1B /* AppData */,
 				E261BEA629E736AA00BCCF1B /* iPad.storyboard */,
 				E261BEA729E736AA00BCCF1B /* iPhone.storyboard */,
 				E24EEB6A29E7170B00837636 /* AppDelegate.swift */,
@@ -85,6 +94,17 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E261BEAD29E73D9A00BCCF1B /* AppData */ = {
+			isa = PBXGroup;
+			children = (
+				E261BEAB29E73D3500BCCF1B /* AppDataLoader.swift */,
+				E261BEAE29E73DBA00BCCF1B /* Date+AppExtensions.swift */,
+				E261BEB029E73E2400BCCF1B /* String+AppExtensions.swift */,
+				E261BEB229E73E6800BCCF1B /* uid2identity.json */,
+			);
+			path = AppData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +172,7 @@
 				E24EEB7729E7170C00837636 /* LaunchScreen.storyboard in Resources */,
 				E261BEA829E736AA00BCCF1B /* iPad.storyboard in Resources */,
 				E24EEB7429E7170C00837636 /* Assets.xcassets in Resources */,
+				E261BEB329E73E6800BCCF1B /* uid2identity.json in Resources */,
 				E261BEA929E736AA00BCCF1B /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,7 +205,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E24EEB6F29E7170B00837636 /* ViewController.swift in Sources */,
+				E261BEB129E73E2400BCCF1B /* String+AppExtensions.swift in Sources */,
+				E261BEAF29E73DBA00BCCF1B /* Date+AppExtensions.swift in Sources */,
 				E24EEB6B29E7170B00837636 /* AppDelegate.swift in Sources */,
+				E261BEAC29E73D3500BCCF1B /* AppDataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

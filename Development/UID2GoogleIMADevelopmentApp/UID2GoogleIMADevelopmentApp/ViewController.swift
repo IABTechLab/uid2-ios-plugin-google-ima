@@ -9,6 +9,7 @@
 
 import AVFoundation
 import GoogleInteractiveMediaAds
+import UID2
 import UIKit
 
 class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDelegate {
@@ -33,6 +34,8 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadUID2Identity()
+        
         playButton.layer.zPosition = CGFloat.greatestFiniteMagnitude
         
         setUpContentPlayer()
@@ -41,6 +44,37 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     
     override func viewDidAppear(_ animated: Bool) {
         playerLayer?.frame = self.videoView.layer.bounds
+    }
+    
+    private func loadUID2Identity() {
+        
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            
+            // Sample UID2Identity data
+            let uid2IdentityData = try AppDataLoader.load(fileName: "uid2identity", fileExtension: "json")
+            let uid2IdentityFromFile = try decoder.decode(UID2Identity.self, from: uid2IdentityData)
+            
+            // Emulate A UID2Identity With Valid Times
+            let identityExpires = Date(timeIntervalSinceNow: 60 * 60).millisecondsSince1970
+            let refreshFrom = Date(timeIntervalSinceNow: 60 * 40).millisecondsSince1970
+            let refreshExpires = Date(timeIntervalSinceNow: 60 * 50).millisecondsSince1970
+            
+            let uid2Identity = UID2Identity(advertisingToken: uid2IdentityFromFile.advertisingToken,
+                                            refreshToken: uid2IdentityFromFile.refreshToken,
+                                            identityExpires: identityExpires,
+                                            refreshFrom: refreshFrom,
+                                            refreshExpires: refreshExpires,
+                                            refreshResponseKey: uid2IdentityFromFile.refreshResponseKey)
+
+            Task {
+                await UID2Manager.shared.setIdentity(uid2Identity)
+            }
+        } catch {
+            print("Error loading UID2Identity")
+        }
+
     }
     
     // MARK: Button Actions

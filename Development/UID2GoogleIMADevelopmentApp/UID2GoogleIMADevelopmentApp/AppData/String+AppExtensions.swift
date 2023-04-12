@@ -1,6 +1,6 @@
 //
 //  String+AppExtensions.swift
-//  
+//
 //
 //  Created by Brad Leege on 3/21/23.
 //
