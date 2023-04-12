@@ -15,14 +15,21 @@ let package = Package(
             targets: ["UID2IMAPlugin"])
     ],
     dependencies: [
-        .package(url: "https://github.com/IABTechLab/uid2-ios-sdk.git", from: "0.0.3")
+        .package(url: "https://github.com/IABTechLab/uid2-ios-sdk.git", from: "0.1.0")
+        // Google IMA SDK will become a dependency here once Google adds SPM support (Expected Q2 2023)
     ],
     targets: [
         .target(
             name: "UID2IMAPlugin",
             dependencies: [
-                .product(name: "UID2", package: "uid2-ios-sdk")
+                .product(name: "UID2", package: "uid2-ios-sdk"),
+                "GoogleInteractiveMediaAds"
             ]),
+        // Binary Target will removed once Google IMA supports SPM (Expected Q2 2023)
+        // IMA 3.18.5 is first public beta of IMA with Secure Signals
+        .binaryTarget(name: "GoogleInteractiveMediaAds",
+                      url: "https://imasdk.googleapis.com/native/downloads/ima-ios-v3.18.5.zip",
+                      checksum: "f8473b337f4a24d0cf92e3e25227a9d33de139597b18332c368629ed30871422"),
         .testTarget(
             name: "UID2IMAPluginTests",
             dependencies: ["UID2IMAPlugin"],

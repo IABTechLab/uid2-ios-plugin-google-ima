@@ -6,13 +6,13 @@
 //
 
 import Foundation
-import UID2
 import GoogleInteractiveMediaAds
+import UID2
 
 @available(iOS 13.0, *)
-class UID2IMASecureSignalsAdapter: NSObject {
+public class UID2IMASecureSignalsAdapter: NSObject {
     
-    required override init() { }
+    required public override init() { }
     
 }
 
@@ -27,7 +27,7 @@ extension UID2IMASecureSignalsAdapter: IMASecureSignalsAdapter {
     }
     
     public static func adSDKVersion() -> IMAVersion {
-        var version = IMAVersion()
+        let version = IMAVersion()
         version.majorVersion = UID2SDKProperties.getUID2SDKVersion().major
         version.minorVersion = UID2SDKProperties.getUID2SDKVersion().minor
         version.patchVersion = UID2SDKProperties.getUID2SDKVersion().patch
