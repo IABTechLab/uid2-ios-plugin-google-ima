@@ -12,7 +12,10 @@ import UID2
 @available(iOS 13.0, *)
 public class UID2IMASecureSignalsAdapter: NSObject {
     
-    required public override init() { }
+    required public override init() {
+        // Ensure UID2Manager has started
+        _ = UID2Manager.shared
+    }
     
 }
 
