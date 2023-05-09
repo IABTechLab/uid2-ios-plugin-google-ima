@@ -15,7 +15,7 @@ let package = Package(
             targets: ["UID2IMAPlugin"])
     ],
     dependencies: [
-        .package(url: "https://github.com/IABTechLab/uid2-ios-sdk.git", from: "0.1.0")
+        .package(url: "https://github.com/IABTechLab/uid2-ios-sdk.git", from: "0.2.0")
         // Google IMA SDK will become a dependency here once Google adds SPM support (Expected Q2 2023)
     ],
     targets: [
