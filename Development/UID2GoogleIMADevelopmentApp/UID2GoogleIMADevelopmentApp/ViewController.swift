@@ -10,6 +10,7 @@
 import AVFoundation
 import GoogleInteractiveMediaAds
 import UID2
+import UID2IMAPlugin
 import UIKit
 
 class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDelegate {
@@ -28,6 +29,8 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     private var contentPlayhead: IMAAVPlayerContentPlayhead?
     private let adsLoader = IMAAdsLoader(settings: nil)
     private var adsManager: IMAAdsManager?
+    
+    private let secureSignalsAdapter = UID2IMASecureSignalsAdapter()
     
     // MARK: - View controller lifecycle methods
     
@@ -135,6 +138,13 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
             adDisplayContainer: adDisplayContainer,
             contentPlayhead: contentPlayhead,
             userContext: nil)
+        
+        print("SDK Version = \(UID2IMASecureSignalsAdapter.adSDKVersion())")
+        print("Adapter Version = \(UID2IMASecureSignalsAdapter.adapterVersion())")
+        secureSignalsAdapter.collectSignals(completion: { signals, error in
+            print("Signal = \(signals)")
+            print("Error = \(error)")
+        })
         
         adsLoader.requestAds(with: request)
     }
