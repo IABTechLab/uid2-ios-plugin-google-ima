@@ -28,8 +28,8 @@ let package = Package(
         // Binary Target will removed once Google IMA supports SPM (Expected Q2 2023)
         // IMA 3.18.5 is first public beta of IMA with Secure Signals
         .binaryTarget(name: "GoogleInteractiveMediaAds",
-                      url: "https://imasdk.googleapis.com/native/downloads/ima-ios-v3.18.5.zip",
-                      checksum: "f8473b337f4a24d0cf92e3e25227a9d33de139597b18332c368629ed30871422"),
+                      url: "https://imasdk.googleapis.com/native/downloads/ima-ios-v3.19.1.zip",
+                      checksum: "d34b186079068cd2d7aa85198429b38939b37e21186800ad27e2fb240abd2494"),
         .testTarget(
             name: "UID2IMAPluginTests",
             dependencies: ["UID2IMAPlugin"],
