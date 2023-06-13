@@ -10,6 +10,7 @@ import GoogleInteractiveMediaAds
 import UID2
 
 @available(iOS 13.0, *)
+@objc(UID2IMASecureSignalsAdapter)
 public class UID2IMASecureSignalsAdapter: NSObject {
     
     required public override init() {
@@ -41,7 +42,7 @@ extension UID2IMASecureSignalsAdapter: IMASecureSignalsAdapter {
         
         Task {
             guard let advertisingToken = await UID2Manager.shared.getAdvertisingToken() else {
-                completion(nil, UID2GoogleAdapterErrors.advertisingTokenNotFoundForIMA)
+                completion(nil, AdvertisingTokenNotFoundError())
                 return
             }
             completion(advertisingToken, nil)
