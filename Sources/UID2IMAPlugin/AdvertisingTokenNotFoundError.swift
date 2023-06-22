@@ -9,4 +9,10 @@ import Foundation
 
 /// Advertising Token Not Found for IMA Adapter
 @objc(AdvertisingTokenNotFoundError)
-public class AdvertisingTokenNotFoundError: NSError { }
+public class AdvertisingTokenNotFoundError: NSError {
+    
+    convenience init() {
+        self.init(domain: "UID", code: 1)
+    }
+    
+}

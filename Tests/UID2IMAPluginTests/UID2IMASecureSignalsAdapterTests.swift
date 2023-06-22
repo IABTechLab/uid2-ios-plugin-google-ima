@@ -92,12 +92,12 @@ final class UID2IMASecureSignalsAdapterTests: XCTestCase {
         let _: String = try await withCheckedThrowingContinuation { continuation in
             
             adapter.collectSignals(completion: { signal, error in
-                guard let error = error as? UID2GoogleAdapterErrors else {
+                guard let error = error as? AdvertisingTokenNotFoundError else {
                     continuation.resume(throwing: "Error returned was not expected type.")
                     return
                 }
                 
-                XCTAssertEqual(UID2GoogleAdapterErrors.advertisingTokenNotFoundForIMA, error)
+                XCTAssertEqual(AdvertisingTokenNotFoundError(), error)
             
                 continuation.resume(returning: "Successful Test")
                 
