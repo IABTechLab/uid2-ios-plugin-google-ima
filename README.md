@@ -6,6 +6,11 @@ A plugin for integrating [UID2](https://github.com/IABTechLab/uid2docs) and [Goo
 [![Swift](https://img.shields.io/badge/Swift-5-orange)](https://img.shields.io/badge/Swift-5-orange)
 [![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-blue)](https://img.shields.io/badge/Swift_Package_Manager-compatible-blue)
 
+## Integration Guide
+
+For the latest instructions on how to use this plugin, refer to the [UID2 IMA Plugin for iOS Integration Guide](https://unifiedid.com/docs/guides/mobile-plugin-ima-ios).
+
+
 ## Repository Structure
 
 ```
@@ -27,8 +32,8 @@ A plugin for integrating [UID2](https://github.com/IABTechLab/uid2docs) and [Goo
 * Xcode 14.0+
 
 | Platform | Minimum target | Swift Version |
-| --- | --- | --- |
-| iOS | 13.0+ | 5.0+ |
+|----------|----------------|---------------|
+| iOS      | 13.0+          | 5.0+          |
 
 ## Development
 
