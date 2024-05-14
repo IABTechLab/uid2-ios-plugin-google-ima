@@ -15,12 +15,16 @@ Version Numbering follows [Semantic Versioning](https://semver.org) standards.  
       *https://github.com/IABTechLab/uid2-ios-plugin-google-ima/blob/ac286e2c9241c04c001ff7a42a4cbb1dfc2c80b9/Package.swift#L18
     * Update / Confirm `adapterVersion()` in `UID2IMASecureSignalsAdapter.swift` is set to expected version
       * https://github.com/IABTechLab/uid2-ios-plugin-google-ima/blob/ac286e2c9241c04c001ff7a42a4cbb1dfc2c80b9/Sources/UID2IMAPlugin/UID2IMASecureSignalsAdapter.swift#L24-L30
+    * Update / Confirm `version` and `source.tag` in `UID2IMAPlugin.podspec.json` are set to expected version
+      * https://github.com/IABTechLab/uid2-ios-plugin-google-ima/blob/main/UID2IMAPlugin.podspec.jsonL6-L12
     * Add and / or Edit any ADRs that support this release
 2. Merge Release PR into `main`
 3. Use GitHub Releases to Publish the release
     * https://github.com/IABTechLab/uid2-ios-plugin-google-gma/releases/new
     * Create tag on `main` for the commit created by merge of the Release PR
     * Document any Release Notes
+4. Publish CocoaPod to trunk
+    * `pod trunk push UID2IMAPlugin.podspec.json`
 4. Create a Next Release PR
     * Set `adapterVersion()` in `UID2IMASecureSignalsAdapter.swift` to the expected next (likely minor) release version of the SDK.
 5. Merge Next Release PR **BEFORE ANY CODE FOR NEXT RELEASE IS MERGED**
