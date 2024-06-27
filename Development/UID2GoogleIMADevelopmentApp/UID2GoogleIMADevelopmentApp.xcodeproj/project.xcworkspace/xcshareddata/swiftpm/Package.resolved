@@ -1,12 +1,21 @@
 {
   "pins" : [
     {
+      "identity" : "swift-asn1",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-asn1.git",
+      "state" : {
+        "revision" : "c7e239b5c1492ffc3ebd7fbcc7a92548ce4e78f0",
+        "version" : "1.1.0"
+      }
+    },
+    {
       "identity" : "swift-package-manager-google-interactive-media-ads-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios.git",
       "state" : {
-        "revision" : "d2a86d37798cfb609bd2bedaef81d332dac5d5eb",
-        "version" : "3.19.1"
+        "revision" : "8b8e3bbe0b8044cdfeedeadae3e8dc871017c31d",
+        "version" : "3.23.0"
       }
     },
     {
@@ -14,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/IABTechLab/uid2-ios-sdk.git",
       "state" : {
-        "revision" : "6204cbc27ef3bd48065e1fbd355958a6f03e248c",
-        "version" : "0.2.0"
+        "revision" : "91c290d29a7093cfc209eca493d1fee80c17e16a",
+        "version" : "1.2.4"
       }
     }
   ],
