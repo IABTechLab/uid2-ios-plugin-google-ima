@@ -20,13 +20,14 @@ public class UID2IMASecureSignalsAdapter: NSObject {
     
 }
 
+@available(iOS 13, *)
 extension UID2IMASecureSignalsAdapter: IMASecureSignalsAdapter {
     
     public static func adapterVersion() -> IMAVersion {
         let version = IMAVersion()
         version.majorVersion = 0
-        version.minorVersion = 3
-        version.patchVersion = 3
+        version.minorVersion = 4
+        version.patchVersion = 0
         return version
     }
     
