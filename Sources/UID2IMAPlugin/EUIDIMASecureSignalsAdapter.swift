@@ -1,27 +1,24 @@
 //
-//  UID2IMASecureSignalsAdapter.swift
+//  EUIDIMASecureSignalsAdapter.swift
 //  
-//
-//  Created by Brad Leege on 3/20/23.
-//
 
 import Foundation
 import GoogleInteractiveMediaAds
 import UID2
 
 @available(iOS 13.0, *)
-@objc(UID2IMASecureSignalsAdapter)
-public class UID2IMASecureSignalsAdapter: NSObject {
+@objc(EUIDIMASecureSignalsAdapter)
+public class EUIDIMASecureSignalsAdapter: NSObject {
     
     required public override init() {
         // Ensure UID2Manager has started
-        _ = UID2Manager.shared
+        _ = EUIDManager.shared
     }
     
 }
 
 @available(iOS 13, *)
-extension UID2IMASecureSignalsAdapter: IMASecureSignalsAdapter {
+extension EUIDIMASecureSignalsAdapter: IMASecureSignalsAdapter {
     
     public static func adapterVersion() -> IMAVersion {
         let version = IMAVersion()
@@ -41,14 +38,12 @@ extension UID2IMASecureSignalsAdapter: IMASecureSignalsAdapter {
     }
     
     public func collectSignals(completion: @escaping IMASignalCompletionHandler) {
-        
         Task {
-            guard let advertisingToken = await UID2Manager.shared.getAdvertisingToken() else {
+            guard let advertisingToken = await EUIDManager.shared.getAdvertisingToken() else {
                 completion(nil, AdvertisingTokenNotFoundError())
                 return
             }
             completion(advertisingToken, nil)
         }
-        
     }
 }

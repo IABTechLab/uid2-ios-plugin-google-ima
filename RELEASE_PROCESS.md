@@ -15,6 +15,8 @@ Version Numbering follows [Semantic Versioning](https://semver.org) standards.  
       *https://github.com/IABTechLab/uid2-ios-plugin-google-ima/blob/ac286e2c9241c04c001ff7a42a4cbb1dfc2c80b9/Package.swift#L18
     * Update / Confirm `adapterVersion()` in `UID2IMASecureSignalsAdapter.swift` is set to expected version
       * https://github.com/IABTechLab/uid2-ios-plugin-google-ima/blob/ac286e2c9241c04c001ff7a42a4cbb1dfc2c80b9/Sources/UID2IMAPlugin/UID2IMASecureSignalsAdapter.swift#L24-L30
+    * Update / Confirm `adapterVersion()` in `EUIDIMASecureSignalsAdapter.swift` is set to expected version
+      * https://github.com/IABTechLab/uid2-ios-plugin-google-ima/blob/d5278ce634aa228712d9a6dae032232df7f2a434/Sources/UID2IMAPlugin/EUIDIMASecureSignalsAdapter.swift#L22-L28
     * Update / Confirm `version` and `source.tag` in `UID2IMAPlugin.podspec.json` are set to expected version
       * https://github.com/IABTechLab/uid2-ios-plugin-google-ima/blob/main/UID2IMAPlugin.podspec.jsonL6-L12
     * Add and / or Edit any ADRs that support this release

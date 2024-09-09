@@ -28,7 +28,16 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
     private var contentPlayhead: IMAAVPlayerContentPlayhead?
     private let adsLoader = IMAAdsLoader(settings: nil)
     private var adsManager: IMAAdsManager?
-    
+
+    private let manager: UID2Manager = {
+        let isEUID = Bundle.main.object(forInfoDictionaryKey: "UID2EnvironmentEUID") as? Bool ?? false
+        if isEUID {
+            return EUIDManager.shared
+        } else {
+            return UID2Manager.shared
+        }
+    }()
+
     // MARK: - View controller lifecycle methods
     
     override func viewDidLoad() {
@@ -69,7 +78,7 @@ class ViewController: UIViewController, IMAAdsLoaderDelegate, IMAAdsManagerDeleg
                                             refreshResponseKey: uid2IdentityFromFile.refreshResponseKey)
 
             Task {
-                await UID2Manager.shared.setIdentity(uid2Identity)
+                await manager.setIdentity(uid2Identity)
             }
         } catch {
             print("Error loading UID2Identity")
