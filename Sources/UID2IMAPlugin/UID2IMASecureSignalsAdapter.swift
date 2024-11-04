@@ -12,8 +12,11 @@ import UID2
 @available(iOS 13.0, *)
 @objc(UID2IMASecureSignalsAdapter)
 public class UID2IMASecureSignalsAdapter: NSObject {
-    
+
     required public override init() {
+        guard #available(iOS 13, *) else {
+            return
+        }
         // Ensure UID2Manager has started
         _ = UID2Manager.shared
     }
@@ -41,7 +44,10 @@ extension UID2IMASecureSignalsAdapter: IMASecureSignalsAdapter {
     }
     
     public func collectSignals(completion: @escaping IMASignalCompletionHandler) {
-        
+        guard #available(iOS 13, *) else {
+            completion(nil, OperatingSystemUnsupportedError())
+            return
+        }
         Task {
             guard let advertisingToken = await UID2Manager.shared.getAdvertisingToken() else {
                 completion(nil, AdvertisingTokenNotFoundError())
