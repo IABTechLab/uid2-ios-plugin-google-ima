@@ -30,7 +30,7 @@ extension UID2IMASecureSignalsAdapter: IMASecureSignalsAdapter {
         let version = IMAVersion()
         version.majorVersion = 1
         version.minorVersion = 0
-        version.patchVersion = 1
+        version.patchVersion = 2
         return version
     }
     
