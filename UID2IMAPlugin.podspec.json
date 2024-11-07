@@ -3,13 +3,13 @@
   "summary": "A plugin for integrating UID2 and Google IMA into iOS applications.",
   "homepage": "https://unifiedid.com/",
   "license": "Apache License, Version 2.0",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "authors": {
     "David Snabel-Caunt": "dave.snabel-caunt@thetradedesk.com"
   },
   "source": {
     "git": "https://github.com/IABTechLab/uid2-ios-plugin-google-ima.git",
-    "tag": "v1.0.1"
+    "tag": "v1.0.2"
   },
   "platforms": {
     "ios": "12.0"

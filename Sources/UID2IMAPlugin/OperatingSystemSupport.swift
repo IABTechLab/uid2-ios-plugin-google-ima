@@ -11,7 +11,7 @@ let isOperatingSystemSupported = ProcessInfo.processInfo.isOperatingSystemAtLeas
 )
 
 /// Adapter called on an unsupported operating system version i.e. lower than UID2's deployment target.
-@objc(UID2GMAOperatingSystemUnsupported)
+@objc(UID2IMAOperatingSystemUnsupported)
 public final class OperatingSystemUnsupportedError: NSError, @unchecked Sendable {
 
     convenience init() {
