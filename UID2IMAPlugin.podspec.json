@@ -23,7 +23,7 @@
     "UID2IMAPlugin": ["Sources/UID2IMAPlugin/PrivacyInfo.xcprivacy"]
   },
   "source_files": [
-    "Sources/UID2IMAPlugin/**/*"
+    "Sources/UID2IMAPlugin/**/*.swift"
   ],
   "dependencies": {
     "GoogleAds-IMA-iOS-SDK": [
