@@ -7,7 +7,7 @@ let package = Package(
     name: "UID2IMAPlugin",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v15)
     ],
     products: [
         .library(
