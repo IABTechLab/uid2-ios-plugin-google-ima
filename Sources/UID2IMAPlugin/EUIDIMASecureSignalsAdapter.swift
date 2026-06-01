@@ -11,9 +11,6 @@ import UID2
 public class EUIDIMASecureSignalsAdapter: NSObject {
     
     required public override init() {
-        guard isOperatingSystemSupported else {
-            return
-        }
         // Ensure UID2Manager has started
         _ = EUIDManager.shared
     }
@@ -25,9 +22,9 @@ extension EUIDIMASecureSignalsAdapter: IMASecureSignalsAdapter {
     
     public static func adapterVersion() -> IMAVersion {
         let version = IMAVersion()
-        version.majorVersion = 1
+        version.majorVersion = 2
         version.minorVersion = 0
-        version.patchVersion = 4
+        version.patchVersion = 0
         return version
     }
     
@@ -41,10 +38,6 @@ extension EUIDIMASecureSignalsAdapter: IMASecureSignalsAdapter {
     }
     
     public func collectSignals(completion: @escaping IMASignalCompletionHandler) {
-        guard isOperatingSystemSupported else {
-            completion(nil, OperatingSystemUnsupportedError())
-            return
-        }
         Task {
             guard let advertisingToken = await EUIDManager.shared.getAdvertisingToken() else {
                 completion(nil, AdvertisingTokenNotFoundError())
