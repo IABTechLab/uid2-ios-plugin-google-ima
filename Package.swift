@@ -7,7 +7,7 @@ let package = Package(
     name: "UID2IMAPlugin",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v15)
     ],
     products: [
         .library(
@@ -15,7 +15,7 @@ let package = Package(
             targets: ["UID2IMAPlugin"])
     ],
     dependencies: [
-        .package(url: "https://github.com/IABTechLab/uid2-ios-sdk.git", "1.7.0" ..< "3.0.0"),
+        .package(url: "https://github.com/IABTechLab/uid2-ios-sdk.git", "1.7.0" ..< "4.0.0"),
         .package(url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios.git", from: "3.18.5")
     ],
     targets: [
