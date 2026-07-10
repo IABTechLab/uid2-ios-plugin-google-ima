@@ -22,7 +22,7 @@ Version Numbering follows [Semantic Versioning](https://semver.org) standards.  
     * Add and / or Edit any ADRs that support this release
 2. Merge Release PR into `main`
 3. Use GitHub Releases to Publish the release
-    * https://github.com/IABTechLab/uid2-ios-plugin-google-gma/releases/new
+    * https://github.com/IABTechLab/uid2-ios-plugin-google-ima/releases/new
     * Create tag on `main` for the commit created by merge of the Release PR
     * Document any Release Notes
 4. Publish CocoaPod to trunk
